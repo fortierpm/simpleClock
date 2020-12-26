@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Clock</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Barrio&display=swap" rel="stylesheet">
+  <style>
+    body {background-color: #CCC; color: #222}
+    @media (prefers-color-scheme: dark) {body {background-color: #222; color: #CCC}}
+    #clock {text-align: center; margin-top: 30vh; font-family: 'Barrio'; font-size: 10vw;}
+  </style>
+  <script type="text/javascript">
+    var oneSecond = 1000; // note: there are 1000 milliseconds in one second
+    var updateClock = setInterval(function(){showCurrentTime()}, oneSecond); // direct influence from "Simple Javascript Clock" by Mikael Elmblad on codepen.io.
+    function showCurrentTime() {
+      var d = new Date();
+      document.getElementById("clock").innerHTML = d.toLocaleTimeString();
+    }
+  </script>
+</head>
+<body>
+  <div id="clock">00:00:00 XM</div>
+</body>
+</html>
